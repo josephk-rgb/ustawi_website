@@ -15,7 +15,7 @@ export default function ContactPage() {
   const heroImage = imageRegistry["official-community-engagement"];
 
   return (
-    <div className="space-y-12 py-14">
+    <div className="space-y-12 pb-14">
       <HeroImage imageSrc={heroImage.src} imageAlt={heroImage.alt}>
         <SectionHeader
           eyebrow="Reach Us"

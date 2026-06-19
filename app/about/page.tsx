@@ -19,7 +19,7 @@ export default function AboutPage() {
   const launchCake = imageRegistry["launch-cake-kenya-prisons"];
 
   return (
-    <div className="space-y-16 py-14">
+    <div className="space-y-16 pb-14">
       <HeroImage imageSrc={heroImage.src} imageAlt={heroImage.alt}>
         <SectionHeader
           eyebrow="Who We Are"

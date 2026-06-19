@@ -16,7 +16,7 @@ export default function GetInvolvedPage() {
   const image = imageRegistry["launch-cake-celebration"];
 
   return (
-    <div className="space-y-14 py-14">
+    <div className="space-y-14 pb-14">
       <HeroImage imageSrc={heroImage.src} imageAlt={heroImage.alt}>
         <SectionHeader
           eyebrow="Join the Movement"

@@ -18,7 +18,7 @@ export default function ImpactPage() {
   const heroImage = imageRegistry["tournament-team-group"];
 
   return (
-    <div className="space-y-14 py-14">
+    <div className="space-y-14 pb-14">
       <HeroImage imageSrc={heroImage.src} imageAlt={heroImage.alt}>
         <SectionHeader
           eyebrow="Proof That It Works"

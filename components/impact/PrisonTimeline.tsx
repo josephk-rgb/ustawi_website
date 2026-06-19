@@ -3,7 +3,7 @@ import { timelineEntries } from "@/lib/content";
 import { imageRegistry } from "@/lib/images";
 
 export function PrisonTimeline() {
-  const icons = ["🎓", "🚩", "🏆", "⭐"];
+  const icons = ["🎓", "🏁", "🏆", "⭐"];
 
   return (
     <div className="space-y-10">

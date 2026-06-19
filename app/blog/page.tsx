@@ -16,7 +16,7 @@ export default function BlogPage() {
   const heroImage = imageRegistry["sotp-workshop-session"];
 
   return (
-    <div className="space-y-10 py-14">
+    <div className="space-y-10 pb-14">
       <HeroImage imageSrc={heroImage.src} imageAlt={heroImage.alt}>
         <SectionHeader
           eyebrow="Updates and Insights"
