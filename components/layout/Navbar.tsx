@@ -13,11 +13,11 @@ export function Navbar() {
           className="inline-flex items-center transition-transform hover:scale-[1.02]"
         >
           <Image
-            src="/ustawilogo.svg"
+            src="/ustawilogo.webp"
             alt="Ustawi Network logo"
             width={104}
             height={104}
-            className="h-20 w-20 object-contain"
+            className="h-14 w-14 object-contain sm:h-16 sm:w-16 lg:h-20 lg:w-20"
             priority
           />
         </Link>
@@ -34,7 +34,7 @@ export function Navbar() {
           ))}
         </nav>
 
-        <div className="hidden md:block">
+        <div className="hidden lg:block">
           <Button href="/get-involved" className="shadow-sm">
             Partner With Us
           </Button>

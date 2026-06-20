@@ -9,7 +9,7 @@ import { imageRegistry } from "@/lib/images";
 export const metadata: Metadata = {
   title: "Blog",
   description:
-    "Read Ustawi Network updates and newsletters, including milestone progress from the 2025 inaugural issue.",
+    "Read Ustawi Network updates and newsletters, including milestone progress from programme graduations and expansion.",
 };
 
 export default function BlogPage() {
@@ -17,7 +17,7 @@ export default function BlogPage() {
 
   return (
     <div className="space-y-10 pb-14">
-      <HeroImage imageSrc={heroImage.src} imageAlt={heroImage.alt}>
+      <HeroImage imageSrc={heroImage.src} imageAlt={heroImage.alt} priority>
         <SectionHeader
           eyebrow="Updates and Insights"
           title="Stories from the work."
@@ -29,35 +29,40 @@ export default function BlogPage() {
 
       <section className="mx-auto max-w-6xl px-6">
         <div className="grid gap-5 md:grid-cols-2">
-          {posts.map((post) => (
-            <article
-              key={post.slug}
-              className="rounded-2xl border border-[var(--color-neutral)] bg-white p-6 shadow-sm"
-            >
-              <div className="relative mb-4 aspect-[16/9] overflow-hidden rounded-xl">
-                <Image
-                  src={heroImage.src}
-                  alt={heroImage.alt}
-                  fill
-                  className="object-cover"
-                  sizes="(max-width: 768px) 100vw, 50vw"
-                />
-              </div>
-              <p className="text-sm font-semibold uppercase tracking-wide text-[var(--color-primary-dark)]">
-                {post.date}
-              </p>
-              <h2 className="mt-2 text-2xl font-extrabold text-[var(--color-secondary)]">
-                {post.title}
-              </h2>
-              <p className="mt-3 text-[var(--color-text-body)]">{post.excerpt}</p>
-              <Link
-                href={`/blog/${post.slug}`}
-                className="mt-5 inline-flex text-sm font-semibold text-[var(--color-secondary)] underline"
+          {posts.map((post) => {
+            const thumbnail =
+              imageRegistry[post.headerImageKey ?? "sotp-workshop-session"];
+
+            return (
+              <article
+                key={post.slug}
+                className="rounded-2xl border border-[var(--color-neutral)] bg-white p-6 shadow-sm"
               >
-                Read story →
-              </Link>
-            </article>
-          ))}
+                <div className="relative mb-4 aspect-[16/9] overflow-hidden rounded-xl">
+                  <Image
+                    src={thumbnail.src}
+                    alt={thumbnail.alt}
+                    fill
+                    className="object-cover"
+                    sizes="(max-width: 768px) 100vw, 50vw"
+                  />
+                </div>
+                <p className="text-sm font-semibold uppercase tracking-wide text-[var(--color-primary-dark)]">
+                  {post.date}
+                </p>
+                <h2 className="mt-2 text-2xl font-extrabold text-[var(--color-secondary)]">
+                  {post.title}
+                </h2>
+                <p className="mt-3 text-[var(--color-text-body)]">{post.excerpt}</p>
+                <Link
+                  href={`/blog/${post.slug}`}
+                  className="mt-5 inline-flex min-h-11 items-center text-sm font-semibold text-[var(--color-secondary)] underline"
+                >
+                  Read story →
+                </Link>
+              </article>
+            );
+          })}
         </div>
       </section>
     </div>

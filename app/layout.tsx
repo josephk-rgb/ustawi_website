@@ -1,4 +1,4 @@
-import type { Metadata } from "next";
+import type { Metadata, Viewport } from "next";
 import { Inter, Sora } from "next/font/google";
 import { GoogleAnalytics } from "@next/third-parties/google";
 import "./globals.css";
@@ -16,6 +16,11 @@ const sora = Sora({
   subsets: ["latin"],
 });
 
+export const viewport: Viewport = {
+  width: "device-width",
+  initialScale: 1,
+};
+
 export const metadata: Metadata = {
   metadataBase: new URL(siteConfig.siteUrl),
   title: {
@@ -24,6 +29,11 @@ export const metadata: Metadata = {
   },
   description:
     "Building accountability, dignity, and safer communities through structured rehabilitation and reintegration programmes in Kenya.",
+  icons: {
+    icon: "/icon.png",
+    apple: "/apple-icon.png",
+  },
+  manifest: "/manifest.webmanifest",
   openGraph: {
     title: "Ustawi Network",
     description:
@@ -32,7 +42,7 @@ export const metadata: Metadata = {
     siteName: "Ustawi Network",
     locale: "en_KE",
     type: "website",
-    images: ["/images/hero-tournament-banner.jpg"],
+    images: ["/images/hero-tournament-banner.webp"],
   },
 };
 
@@ -42,8 +52,8 @@ export default function RootLayout({
   children: React.ReactNode;
 }>) {
   return (
-    <html lang="en" className={`${inter.variable} ${sora.variable} antialiased`}>
-      <body className="flex min-h-screen flex-col">
+    <html lang="en" className={`${inter.variable} ${sora.variable} overflow-x-hidden antialiased`}>
+      <body className="flex min-h-screen flex-col overflow-x-hidden">
         <Navbar />
         <main className="flex-1">{children}</main>
         <Footer />

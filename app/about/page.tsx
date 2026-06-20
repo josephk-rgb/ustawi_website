@@ -20,7 +20,7 @@ export default function AboutPage() {
 
   return (
     <div className="space-y-16 pb-14">
-      <HeroImage imageSrc={heroImage.src} imageAlt={heroImage.alt}>
+      <HeroImage imageSrc={heroImage.src} imageAlt={heroImage.alt} priority>
         <SectionHeader
           eyebrow="Who We Are"
           title="Born from a gap no one else was filling."
@@ -135,13 +135,18 @@ export default function AboutPage() {
             </article>
           ))}
         </div>
-        <div className="rounded-2xl bg-[var(--color-primary)] px-6 py-4 text-sm font-semibold uppercase tracking-wide text-[var(--color-secondary)]">
-          Values: {approachValues.join(" · ")}
+        <div className="flex flex-col gap-2 rounded-2xl bg-[var(--color-primary)] px-6 py-4 text-sm font-semibold uppercase tracking-wide text-[var(--color-secondary)] sm:flex-row sm:flex-wrap sm:items-center">
+          <span>Values:</span>
+          {approachValues.map((value) => (
+            <span key={value} className="rounded-full bg-white/20 px-3 py-1 text-xs">
+              {value}
+            </span>
+          ))}
         </div>
       </section>
 
       <section className="mx-auto max-w-6xl rounded-2xl bg-[var(--color-secondary)] px-6 py-12 text-white">
-        <h2 className="text-3xl font-extrabold">
+        <h2 className="text-2xl font-extrabold md:text-3xl">
           We&apos;re just getting started. Will you help us go further?
         </h2>
         <p className="mt-3 max-w-3xl text-white/90">
