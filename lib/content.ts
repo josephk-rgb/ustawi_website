@@ -13,7 +13,9 @@ export const siteConfig = {
 export const navLinks = [
   { label: "Home", href: "/" },
   { label: "About", href: "/about" },
+  { label: "Programs", href: "/programs" },
   { label: "Our Impact", href: "/impact" },
+  { label: "Moments", href: "/moments" },
   { label: "Get Involved", href: "/get-involved" },
   { label: "Blog", href: "/blog" },
 ];
@@ -38,9 +40,15 @@ export const homePillars = [
 ];
 
 export const impactStats = [
-  { value: "80+", label: "Men currently enrolled in SOTP" },
-  { value: "3", label: "Maximum security prisons running the programme" },
-  { value: "30", label: "Facilities targeted by end of 2026" },
+  { value: "200+", label: "Men graduated from SOTP" },
+  { value: "160", label: "Currently in active training" },
+  { value: "5", label: "Maximum security prisons running programmes" },
+];
+
+export const heroBadges = [
+  "200+ graduated",
+  "160 in training",
+  "5 maximum prisons",
 ];
 
 export const approachValues = [
@@ -106,6 +114,13 @@ export const timelineEntries = [
     description:
       "30 participants completed 288 hours over 8 months. 5 officers completed Training-of-Trainers to sustain delivery in prison facilities.",
     images: ["graduation-certificate-group", "graduation-certificate-handshake"],
+  },
+  {
+    year: "March 2026",
+    title: "SOTP Graduation and One-Year Milestone at Kamiti Main Prison",
+    description:
+      "Ustawi Network joined the Kenya Prisons Service in marking a significant milestone for SOTP at Kamiti Main Prison — celebrating the graduation of more than 90 inmates and one year since the programme was launched at Kamiti Main on 17 March 2025. Naivasha Maximum and Kisumu Maximum Prisons joined virtually.",
+    images: ["graduation-certificate-group", "graduation-certificate-presenter"],
   },
 ];
 

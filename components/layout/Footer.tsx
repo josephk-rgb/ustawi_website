@@ -8,7 +8,7 @@ export function Footer() {
       <div className="mx-auto grid max-w-6xl gap-8 px-6 py-12 md:grid-cols-3">
         <div className="space-y-3">
           <Image
-            src="/ustawilogo.svg"
+            src="/ustawilogo.webp"
             alt="Ustawi Network logo"
             width={84}
             height={84}
@@ -54,7 +54,7 @@ export function Footer() {
                 href={item.href}
                 target="_blank"
                 rel="noreferrer"
-                className="inline-flex h-9 w-9 items-center justify-center rounded-full border border-white/30 bg-white/10 text-sm font-bold text-white transition-colors hover:bg-white/20"
+                className="inline-flex h-11 w-11 items-center justify-center rounded-full border border-white/30 bg-white/10 text-sm font-bold text-white transition-colors hover:bg-white/20"
                 aria-label={item.href}
               >
                 {item.label}

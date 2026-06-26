@@ -4,6 +4,7 @@ import { notFound } from "next/navigation";
 import type { Metadata } from "next";
 import { posts } from "@/lib/posts";
 import { imageRegistry } from "@/lib/images";
+import { MediaLinks } from "@/components/ui/MediaLinks";
 
 type Params = {
   slug: string;
@@ -38,13 +39,15 @@ export default async function BlogPostPage({
   const resolvedParams = await params;
   const post = posts.find((item) => item.slug === resolvedParams.slug);
   if (!post) notFound();
-  const headerImage = imageRegistry["graduation-certificate-group"];
+
+  const headerImage =
+    imageRegistry[post.headerImageKey ?? "graduation-certificate-group"];
 
   return (
     <article className="mx-auto max-w-3xl space-y-6 px-6 py-16">
       <Link
         href="/blog"
-        className="inline-flex text-sm font-semibold text-[var(--color-secondary)] underline"
+        className="inline-flex min-h-11 items-center text-sm font-semibold text-[var(--color-secondary)] underline"
       >
         ← Back to Blog
       </Link>
@@ -60,7 +63,7 @@ export default async function BlogPostPage({
       <p className="text-sm font-semibold uppercase tracking-wide text-[var(--color-primary-dark)]">
         {post.date}
       </p>
-      <h1 className="text-4xl font-extrabold tracking-tight text-[var(--color-secondary)]">
+      <h1 className="text-3xl font-extrabold tracking-tight text-[var(--color-secondary)] md:text-4xl">
         {post.title}
       </h1>
       <p className="text-lg text-[var(--color-text-body)]">{post.excerpt}</p>
@@ -69,6 +72,7 @@ export default async function BlogPostPage({
           <p key={paragraph}>{paragraph}</p>
         ))}
       </div>
+      {post.showMedia ? <MediaLinks /> : null}
     </article>
   );
 }

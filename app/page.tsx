@@ -13,7 +13,7 @@ export default function Home() {
           <SectionHeader
             eyebrow="Our Mission"
             title="Building Accountability, Dignity & Safer Communities."
-            description="Incarceration rates for sexual offences have risen while structured offence-specific rehabilitation has remained scarce. Ustawi Network exists to break that cycle through evidence-based support, accountability, and transformation."
+            description="Ustawi Network partners with correctional institutions to deliver evidence-based, offence-specific rehabilitation — because accountability, dignity, and community safety go hand in hand."
           />
           <div className="rounded-2xl border border-[var(--color-neutral)] bg-[var(--color-secondary)] p-8 text-white">
             <h3 className="text-2xl font-bold">Partner with us in this work.</h3>

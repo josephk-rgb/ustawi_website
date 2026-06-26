@@ -13,11 +13,11 @@ export const metadata: Metadata = {
 
 export default function GetInvolvedPage() {
   const heroImage = imageRegistry["launch-cake-celebration"];
-  const image = imageRegistry["launch-cake-celebration"];
+  const image = imageRegistry["nakuru-tournament-field"];
 
   return (
     <div className="space-y-14 pb-14">
-      <HeroImage imageSrc={heroImage.src} imageAlt={heroImage.alt}>
+      <HeroImage imageSrc={heroImage.src} imageAlt={heroImage.alt} priority>
         <SectionHeader
           eyebrow="Join the Movement"
           title="Every partnership brings us closer to a Kenya where communities are truly safe."
@@ -32,12 +32,18 @@ export default function GetInvolvedPage() {
       </section>
 
       <section className="mx-auto max-w-6xl overflow-hidden rounded-2xl bg-[var(--color-secondary)] shadow-sm">
-        <div className="relative aspect-[21/9]">
-          <Image src={image.src} alt={image.alt} fill className="object-cover" />
+        <div className="relative aspect-[16/9] min-h-[180px] md:aspect-[21/9] md:min-h-0">
+          <Image
+            src={image.src}
+            alt={image.alt}
+            fill
+            className="object-cover"
+            sizes="100vw"
+          />
         </div>
         <div className="px-6 py-10 text-center text-white">
           <div className="mx-auto mb-6 h-1 w-28 bg-[var(--color-teal-line)]" />
-          <p className="text-3xl font-black">
+          <p className="text-2xl font-black md:text-3xl">
             &quot;Restoring dignity. Strengthening communities. Supporting
             transformation.&quot;
           </p>

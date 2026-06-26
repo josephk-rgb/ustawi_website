@@ -22,7 +22,7 @@ export function ImpactNumbers() {
 
         <div className="grid gap-8 rounded-2xl bg-[var(--color-secondary)] p-8 text-white md:grid-cols-2 md:items-center md:p-10">
           <div className="relative space-y-4 overflow-hidden">
-            <span className="pointer-events-none absolute -left-3 -top-16 text-[10rem] font-black leading-none text-[var(--color-primary)]/25">
+            <span className="pointer-events-none absolute -left-3 -top-16 text-[5rem] font-black leading-none text-[var(--color-primary)]/25 md:text-[10rem]">
               &ldquo;
             </span>
             <p className="text-sm uppercase tracking-[0.18em] text-[var(--color-primary)]">

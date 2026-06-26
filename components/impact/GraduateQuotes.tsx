@@ -17,7 +17,7 @@ export function GraduateQuotes() {
           key={quote.text}
           className="relative overflow-hidden rounded-2xl border border-[var(--color-neutral)] bg-white p-6 shadow-sm"
         >
-          <span className="pointer-events-none absolute -left-2 -top-14 text-[10rem] font-black leading-none text-[var(--color-primary)]/20">
+          <span className="pointer-events-none absolute -left-2 -top-14 text-[5rem] font-black leading-none text-[var(--color-primary)]/20 md:text-[10rem]">
             &ldquo;
           </span>
           <p className="relative text-xl font-semibold leading-relaxed text-[var(--color-secondary)] md:text-2xl">

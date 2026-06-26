@@ -14,7 +14,7 @@ export function MobileMenu() {
         type="button"
         aria-label={open ? "Close menu" : "Open menu"}
         onClick={() => setOpen((value) => !value)}
-        className="inline-flex h-10 w-10 items-center justify-center rounded-full border border-[var(--color-neutral)] bg-white text-[var(--color-secondary)] shadow-sm"
+        className="inline-flex h-11 w-11 items-center justify-center rounded-full border border-[var(--color-neutral)] bg-white text-[var(--color-secondary)] shadow-sm"
       >
         <span className="text-lg">{open ? "✕" : "☰"}</span>
       </button>
@@ -27,7 +27,7 @@ export function MobileMenu() {
                 key={link.href}
                 href={link.href}
                 onClick={() => setOpen(false)}
-                className="rounded-xl px-3 py-2 text-sm font-semibold text-[var(--color-secondary)] hover:bg-[var(--color-background)]"
+                className="rounded-xl px-3 py-3 text-sm font-semibold text-[var(--color-secondary)] hover:bg-[var(--color-background)]"
               >
                 {link.label}
               </Link>

@@ -19,7 +19,7 @@ export function AudienceCards() {
           <p className="mt-3 text-[var(--color-text-body)]">{card.body}</p>
           <a
             href={`mailto:${siteConfig.email}`}
-            className="mt-5 inline-flex rounded-full bg-[var(--color-primary)] px-4 py-2 text-sm font-semibold text-[var(--color-secondary)] transition-colors hover:bg-[var(--color-primary-dark)]"
+            className="mt-5 inline-flex min-h-11 items-center rounded-full bg-[var(--color-primary)] px-4 py-3 text-sm font-semibold text-[var(--color-secondary)] transition-colors hover:bg-[var(--color-primary-dark)]"
           >
             {card.cta} →
           </a>

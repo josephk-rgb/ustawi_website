@@ -16,7 +16,7 @@ export default function ContactPage() {
 
   return (
     <div className="space-y-12 pb-14">
-      <HeroImage imageSrc={heroImage.src} imageAlt={heroImage.alt}>
+      <HeroImage imageSrc={heroImage.src} imageAlt={heroImage.alt} priority>
         <SectionHeader
           eyebrow="Reach Us"
           title="Let's talk about what's possible."

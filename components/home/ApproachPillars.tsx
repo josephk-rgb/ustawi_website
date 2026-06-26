@@ -16,7 +16,7 @@ export function ApproachPillars() {
         />
 
         <figure className="group relative overflow-hidden rounded-2xl shadow-md">
-          <div className="relative aspect-[21/9] min-h-[220px]">
+          <div className="relative aspect-[16/9] min-h-[180px] md:aspect-[21/9] md:min-h-0">
             <Image
               src={featureImage.src}
               alt={featureImage.alt}
