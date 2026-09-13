@@ -1,8 +1,17 @@
+import type { Metadata } from "next";
 import { Button } from "@/components/ui/Button";
 import { SectionHeader } from "@/components/ui/SectionHeader";
 import { Hero } from "@/components/home/Hero";
 import { ApproachPillars } from "@/components/home/ApproachPillars";
 import { ImpactNumbers } from "@/components/home/ImpactNumbers";
+import { buildPageMetadata } from "@/lib/seo";
+
+export const metadata: Metadata = buildPageMetadata({
+  title: "Prison Rehabilitation in Kenya",
+  description:
+    "Ustawi Network delivers structured prison rehabilitation and reintegration in Kenya, including the Sex Offender Treatment Programme (SOTP) with Kenya Prisons Service.",
+  path: "/",
+});
 
 export default function Home() {
   return (

@@ -7,6 +7,7 @@ type ButtonProps = {
   size?: "sm" | "md" | "lg";
   type?: "button" | "submit";
   className?: string;
+  onClick?: () => void;
 };
 
 export function Button({
@@ -16,6 +17,7 @@ export function Button({
   size = "md",
   type = "button",
   className = "",
+  onClick,
 }: ButtonProps) {
   const sizeClasses =
     size === "sm"
@@ -40,7 +42,11 @@ export function Button({
   }
 
   return (
-    <button type={type} className={`${base} ${classes} ${className}`}>
+    <button
+      type={type}
+      onClick={onClick}
+      className={`${base} ${classes} ${className}`}
+    >
       {children}
     </button>
   );

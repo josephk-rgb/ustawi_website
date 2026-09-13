@@ -1,16 +1,20 @@
 import Image from "next/image";
+import Link from "next/link";
 import type { Metadata } from "next";
 import { SectionHeader } from "@/components/ui/SectionHeader";
 import { Button } from "@/components/ui/Button";
 import { HeroImage } from "@/components/ui/HeroImage";
 import { homePillars, approachValues } from "@/lib/content";
 import { imageRegistry } from "@/lib/images";
+import { buildPageMetadata } from "@/lib/seo";
 
-export const metadata: Metadata = {
-  title: "About",
+export const metadata: Metadata = buildPageMetadata({
+  title: "About Ustawi Network",
   description:
-    "Learn how Ustawi Network was born and how the Sexual Offenders Treatment Programme creates pathways to accountability and safer communities.",
-};
+    "Ustawi Network is a Kisumu-based nonprofit delivering offence-specific prison rehabilitation in Kenya, beginning with SOTP in partnership with Kenya Prisons Service.",
+  path: "/about/",
+  image: "/images/graduation-certificate-presenter.webp",
+});
 
 export default function AboutPage() {
   const heroImage = imageRegistry["graduation-certificate-presenter"];
@@ -69,7 +73,21 @@ export default function AboutPage() {
             SOTP is an intensive psychosocial programme designed specifically for
             men convicted of sexual offences. Each cohort covers personal
             responsibility, emotional regulation, understanding harm, consent,
-            empathy, and reintegration preparation.
+            empathy, and reintegration preparation. Read the dedicated{" "}
+            <Link
+              href="/programs/sotp"
+              className="font-semibold text-[var(--color-secondary)] underline"
+            >
+              SOTP programme page
+            </Link>{" "}
+            or the{" "}
+            <Link
+              href="/resources/guides/what-is-sotp-kenya"
+              className="font-semibold text-[var(--color-secondary)] underline"
+            >
+              full explainer
+            </Link>
+            .
           </p>
           <ul className="mt-5 grid gap-3 text-sm font-semibold text-[var(--color-secondary)] md:grid-cols-3">
             <li className="rounded-xl border-l-4 border-l-[var(--color-teal-line)] bg-[var(--color-background)] p-4">

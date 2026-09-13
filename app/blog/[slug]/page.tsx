@@ -5,6 +5,7 @@ import type { Metadata } from "next";
 import { posts } from "@/lib/posts";
 import { imageRegistry } from "@/lib/images";
 import { MediaLinks } from "@/components/ui/MediaLinks";
+import { buildPageMetadata } from "@/lib/seo";
 
 type Params = {
   slug: string;
@@ -25,10 +26,15 @@ export async function generateMetadata({
     return { title: "Post Not Found" };
   }
 
-  return {
+  const image = imageRegistry[post.headerImageKey ?? "graduation-certificate-group"]?.src;
+
+  return buildPageMetadata({
     title: post.title,
     description: post.excerpt,
-  };
+    path: `/blog/${post.slug}/`,
+    image,
+    type: "article",
+  });
 }
 
 export default async function BlogPostPage({

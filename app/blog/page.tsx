@@ -5,12 +5,14 @@ import { SectionHeader } from "@/components/ui/SectionHeader";
 import { HeroImage } from "@/components/ui/HeroImage";
 import { posts } from "@/lib/posts";
 import { imageRegistry } from "@/lib/images";
+import { buildPageMetadata } from "@/lib/seo";
 
-export const metadata: Metadata = {
-  title: "Blog",
+export const metadata: Metadata = buildPageMetadata({
+  title: "News and programme updates",
   description:
-    "Read Ustawi Network updates and newsletters, including milestone progress from programme graduations and expansion.",
-};
+    "Ustawi Network news from SOTP graduations, prison partnerships, and expansion across Kenya — separate from evergreen resource guides.",
+  path: "/blog/",
+});
 
 export default function BlogPage() {
   const heroImage = imageRegistry["sotp-workshop-session"];
@@ -27,7 +29,17 @@ export default function BlogPage() {
         />
       </HeroImage>
 
-      <section className="mx-auto max-w-6xl px-6">
+      <section className="mx-auto max-w-6xl space-y-6 px-6">
+        <p className="rounded-2xl border border-[var(--color-neutral)] bg-white px-5 py-4 text-[var(--color-text-body)]">
+          Looking for explainers and tools rather than news? Visit{" "}
+          <Link
+            href="/resources"
+            className="font-semibold text-[var(--color-secondary)] underline"
+          >
+            Resources
+          </Link>{" "}
+          for SOTP guides, a glossary, and calculators.
+        </p>
         <div className="grid gap-5 md:grid-cols-2">
           {posts.map((post) => {
             const thumbnail =

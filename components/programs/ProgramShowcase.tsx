@@ -48,16 +48,16 @@ export function ProgramShowcase() {
 
           <div className="mt-8 flex flex-wrap gap-3">
             <Link
-              href="/impact"
+              href="/programs/sotp"
               className="inline-flex min-h-11 items-center rounded-full bg-[var(--color-primary)] px-5 py-2.5 text-sm font-semibold text-[var(--color-secondary)] transition-colors hover:bg-[var(--color-primary-dark)]"
             >
-              See our impact →
+              How SOTP works →
             </Link>
             <Link
-              href="/moments"
+              href="/impact"
               className="inline-flex min-h-11 items-center rounded-full border border-white/30 px-5 py-2.5 text-sm font-semibold text-white transition-colors hover:bg-white/10"
             >
-              View moments →
+              See our impact →
             </Link>
           </div>
         </div>

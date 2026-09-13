@@ -4,12 +4,15 @@ import { SectionHeader } from "@/components/ui/SectionHeader";
 import { AudienceCards } from "@/components/get-involved/AudienceCards";
 import { HeroImage } from "@/components/ui/HeroImage";
 import { imageRegistry } from "@/lib/images";
+import { buildPageMetadata } from "@/lib/seo";
 
-export const metadata: Metadata = {
-  title: "Get Involved",
+export const metadata: Metadata = buildPageMetadata({
+  title: "Get involved in prison rehabilitation",
   description:
-    "Partner with Ustawi Network as a donor, corporate organisation, public agency, or individual and invest in safer communities.",
-};
+    "Partner with Ustawi Network as a donor, corporate organisation, public agency, or individual and invest in safer communities in Kenya.",
+  path: "/get-involved/",
+  image: "/images/launch-cake-celebration.webp",
+});
 
 export default function GetInvolvedPage() {
   const heroImage = imageRegistry["launch-cake-celebration"];

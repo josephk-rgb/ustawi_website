@@ -3,12 +3,15 @@ import { SectionHeader } from "@/components/ui/SectionHeader";
 import { PhotoGrid } from "@/components/ui/PhotoGrid";
 import { HeroImage } from "@/components/ui/HeroImage";
 import { impactGallery, imageRegistry } from "@/lib/images";
+import { buildPageMetadata } from "@/lib/seo";
 
-export const metadata: Metadata = {
-  title: "Moments",
+export const metadata: Metadata = buildPageMetadata({
+  title: "Moments from rehabilitation programmes",
   description:
     "Graduation ceremonies, tournament engagement, and launch celebrations from Ustawi Network programme sites across Kenya.",
-};
+  path: "/moments/",
+  image: "/images/graduation-certificate-group.webp",
+});
 
 export default function MomentsPage() {
   const heroImage = imageRegistry["graduation-certificate-group"];

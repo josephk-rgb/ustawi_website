@@ -11,11 +11,11 @@ export const siteConfig = {
 };
 
 export const navLinks = [
-  { label: "Home", href: "/" },
   { label: "About", href: "/about" },
   { label: "Programs", href: "/programs" },
   { label: "Our Impact", href: "/impact" },
   { label: "Moments", href: "/moments" },
+  { label: "Resources", href: "/resources" },
   { label: "Get Involved", href: "/get-involved" },
   { label: "Blog", href: "/blog" },
 ];
