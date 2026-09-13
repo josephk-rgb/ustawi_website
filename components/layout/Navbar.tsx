@@ -27,7 +27,7 @@ export function Navbar() {
             <Link
               key={link.href}
               href={link.href}
-              className="rounded-full px-3 py-2 text-sm font-semibold text-[var(--color-secondary)] transition-colors hover:bg-[var(--color-background)] hover:text-[var(--color-primary-dark)]"
+              className="rounded-full px-2.5 py-2 text-sm font-semibold text-[var(--color-secondary)] transition-colors hover:bg-[var(--color-background)] hover:text-[var(--color-primary-dark)]"
             >
               {link.label}
             </Link>

@@ -8,12 +8,15 @@ import { MediaLinks } from "@/components/ui/MediaLinks";
 import { imageRegistry } from "@/lib/images";
 import { goals2026 } from "@/lib/content";
 import { Button } from "@/components/ui/Button";
+import { buildPageMetadata } from "@/lib/seo";
 
-export const metadata: Metadata = {
-  title: "Our Impact",
+export const metadata: Metadata = buildPageMetadata({
+  title: "Impact of prison rehabilitation in Kenya",
   description:
-    "See Ustawi Network's growth from pilot to multi-prison implementation, with graduation milestones and 2026 goals.",
-};
+    "From a 20-man Kamiti pilot to 200+ SOTP graduates across five maximum-security prisons — Ustawi Network's impact with Kenya Prisons Service.",
+  path: "/impact/",
+  image: "/images/tournament-team-group.webp",
+});
 
 export default function ImpactPage() {
   const heroImage = imageRegistry["tournament-team-group"];

@@ -4,12 +4,14 @@ import { HeroImage } from "@/components/ui/HeroImage";
 import { Button } from "@/components/ui/Button";
 import { siteConfig } from "@/lib/content";
 import { imageRegistry } from "@/lib/images";
+import { buildPageMetadata } from "@/lib/seo";
 
-export const metadata: Metadata = {
-  title: "Contact",
+export const metadata: Metadata = buildPageMetadata({
+  title: "Contact Ustawi Network",
   description:
-    "Contact Ustawi Network to discuss partnerships, donations, volunteering, and programme collaboration.",
-};
+    "Contact Ustawi Network in Kisumu to discuss partnerships, donations, volunteering, and prison rehabilitation collaboration in Kenya.",
+  path: "/contact/",
+});
 
 export default function ContactPage() {
   const heroImage = imageRegistry["official-community-engagement"];
